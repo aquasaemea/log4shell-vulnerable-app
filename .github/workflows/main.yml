@@ -51,7 +51,7 @@ jobs:
         uses: docker://gradle:7.3.1-jdk17
         with:
           user: gradle
-          args: gradle dependencies -q
+          args: gradle generatePomFileForMavenPublication
       - name: Run Aqua scanner
         uses: docker://aquasec/aqua-scanner
         with:
