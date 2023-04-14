@@ -1,1 +1,2 @@
 rootProject.name = 'log4shell-vulnerable-app'
+enableFeaturePreview('ONE_LOCKFILE_PER_PROJECT')
