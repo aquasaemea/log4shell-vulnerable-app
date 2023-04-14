@@ -47,6 +47,11 @@ jobs:
         with:
           user: gradle
           args: gradle bootJar --no-daemon
+      - name: Gradle Lock file
+        uses: docker://gradle:7.3.1-jdk17
+        with:
+          user: gradle
+          args: gradle dependencies -q > gradle-dependencies-q.txt
       - name: Run Aqua scanner
         uses: docker://aquasec/aqua-scanner
         with:
