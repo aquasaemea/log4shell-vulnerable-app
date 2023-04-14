@@ -52,6 +52,12 @@ jobs:
         with:
           user: gradle
           args: gradle generatePomFileForMavenPublication
+      - name: DEBUG DETAILS
+        run: |
+          pwd
+          find .
+          ls -la ./build/publications/maven/pom-default.xml
+          cat ./build/publications/maven/pom-default.xml
       - name: Run Aqua scanner
         uses: docker://aquasec/aqua-scanner
         with:
